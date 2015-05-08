@@ -1,0 +1,25 @@
+<h1>Edit note</h1>
+<%= form_for :note, url: note_path(@note), method: :patch do |f| %>
+    <% if @note.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@note.errors.count, 'error') %> prohibited this note from being saved: </h2>
+            <ul>
+                <% @note.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <p>
+        <%= f.label :text %><br/>
+        <%= f.text_field :text %>
+    </p>
+    <p>
+        <%= f.label :date %><br/>
+        <%= f.date_field :date %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+<%= link_to 'Back', notes_path %>
