@@ -18,6 +18,10 @@
         <%= f.date_field :date %>
     </p>
     <p>
+        <%= f.label :category %><br/>
+        <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
+    </p>
+    <p>
         <%= f.submit %>
     </p>
 <% end %>
