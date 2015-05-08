@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @notes.each do |note| %>
+            <tr>
+                <td><%= note.id %></td>
+                <td><%= note.text %></td>
+                <td><%= note.date %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
