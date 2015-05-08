@@ -4,6 +4,7 @@ class CreateNotes < ActiveRecord::Migration
       t.string :text
       t.date :date
 
+
       t.timestamps null: false
     end
   end
