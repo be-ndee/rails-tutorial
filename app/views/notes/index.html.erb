@@ -17,7 +17,7 @@
                 <td><%= note.id %></td>
                 <td><%= note.text %></td>
                 <td><%= note.date %></td>
-                <td><%= Category.find(note.category_id).name %></td>
+                <td><%= note.category.name %></td>
                 <td><%= link_to 'Show', note_path(note) %></td>
                 <td><%= link_to 'Edit', edit_note_path(note) %></td>
                 <td><%= link_to 'Destroy', note_path(note),
